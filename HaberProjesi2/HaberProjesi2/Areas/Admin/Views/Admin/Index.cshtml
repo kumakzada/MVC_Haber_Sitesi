@@ -1,0 +1,115 @@
+﻿
+@if (Session["ID"] == null)
+{
+    Response.Redirect("~/Home/Login");
+}
+
+
+@model IEnumerable<HaberProjesi2.Models.Haber>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+
+@*<h2>Index</h2>*@
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<div class="table-responsive">
+
+    <table class="table-responsive">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Baslik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ozet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Icerik)
+            </th>
+            @*  <th>
+                        @Html.DisplayNameFor(model => model.YayinTarih)
+                    </th>
+                     <th>
+                        @Html.DisplayNameFor(model => model.YazarID)
+                    </th>
+                     <th>
+                    @Html.DisplayNameFor(model => model.KategoriID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HaberTipi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VideoYol)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResimYol)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KucukResimYol)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Goruntulenme)
+                </th>*@
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ozet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Icerik)
+                </td>
+                @*  <td>
+                            @Html.DisplayFor(modelItem => item.YayinTarih)
+                        </td>
+                           <td>
+                            @Html.DisplayFor(modelItem => item.YazarID)
+                        </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.KategoriID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HaberTipi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VideoYol)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResimYol)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KucukResimYol)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Goruntulenme)
+                    </td>*@
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }) |*@
+                    @Html.ActionLink("haberKaldir", "haberKaldir", new { haberid = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+
+
+

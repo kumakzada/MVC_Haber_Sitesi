@@ -1,0 +1,34 @@
+﻿
+@model IEnumerable<HaberProjesi2.Models.Haber>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Ana.cshtml";
+}
+
+<!-- content top -->
+<div id="content_top">
+    <div class="region">
+        <aside id="block_breaking_news" class="block">
+            <h3 class="block_title">Son Dakika</h3>
+            <div class="content">
+                <ul>
+                    <li><a href="#">Bugun Sakarya Universitesin de yemege Zam Geldi Diye protisto Yaptilar...</a></li>
+                    <li><a href="#">Sakarya Universitesin de Aralik Ayin 31'ne Final Sinavlar Baslayacakmis...</a></li>
+                    <li><a href="#">Sakarya Serdivan Belediyesi Yeni Bir Aciklamada Bulundu. Millet Sasti Kaldi...</a></li>
+                </ul>
+            </div>
+        </aside>
+        @{
+            Html.RenderAction("Slidergetir", "Home");
+
+            Html.RenderAction("SonHaberBaslik");
+
+            Html.RenderAction("UstTab");
+
+            Html.RenderAction("Yayin");
+
+        }
+
+    </div>
+</div>
+

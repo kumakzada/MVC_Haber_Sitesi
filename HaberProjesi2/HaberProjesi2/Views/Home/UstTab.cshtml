@@ -1,0 +1,20 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div id="block_content_top_tabs" class="block">
+    <ul>
+        <li><a href="#block_video"><span class="bg">Video</span></a></li>
+        <li><a href="#block_opinions"><span class="bg">Gorusler</span></a></li>
+
+    </ul>
+     @Html.Partial("Tab_VideoGetir");
+    @{
+        Html.RenderPartial("Tab_VideoGetir");
+        Html.RenderPartial("Tab_GorusGetir");
+    }
+
+
+</div>
+

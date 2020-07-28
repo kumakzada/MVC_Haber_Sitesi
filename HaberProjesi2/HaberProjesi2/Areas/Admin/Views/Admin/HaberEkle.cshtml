@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "HaberEkle";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+@model HaberProjesi2.Models.Haber
+
+@using (Html.BeginForm("HaberEkle2", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row-fluid">
+        <div class="span12 widget">
+            <h2 class="widget-heading">Simple fields</h2>
+
+            <div class="form-line">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <label>Baslik</label>
+                    </div>
+                    <div class="span9">
+                        <input type="text" name="Baslik" class="simple_input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-line">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <label>Ozet</label>
+                    </div>
+                    <div class="span9">
+                        <input type="text" name="Ozet" class="simple_input" placeholder="Ozet Giriniz">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-line">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <label>Icerik</label>
+                    </div>
+                    <div class="span9">
+                        <textarea type="text" name="Icerik" class="simple_input"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-line">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <label>yayin Tarih</label>
+                    </div>
+                    <div class="span9">
+                        <input type="date" name="YayinTarih" class="simple_input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-line">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <label>Label with description</label>
+                    </div>
+                    <div class="span9">
+                        @Html.DropDownList("KategoriID", new SelectList(ViewBag.KategoriIDs, "ID", "Ad"))
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-line">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <label>Label with description</label>
+                    </div>
+                    <div class="span9">
+                        @Html.DropDownList("HaberTipi", new SelectList(ViewBag.HabertipIDs, "ID", "Ad"))
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-line">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <label><i class="icon-star"></i>resim</label>
+                    </div>
+                    <div class="span9">
+                        <input type="file" name="Resim" id="Resim" class="simple_input">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button type="submit">kaydet</button>
+    </div>
+}
+
+

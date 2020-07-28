@@ -1,0 +1,32 @@
+﻿@model IEnumerable<HaberProjesi2.Models.Haber>
+@{
+    Layout = null;
+}
+
+<section id="block_editors_choice" class="block">
+    <h3 class="block_title">Editor's choice</h3>
+    <div class="content">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+
+                    <div class="editors_inner2">
+                        <article class="editors_inner">
+                            <div class="editors_left"><img src="@item.KucukResimYol" alt="@item.Ozet" /></div>
+                            <div class="editors_right">
+                                <h4 class="title"><a href="/Galeri/GaleriGoster/@item.Baslik/@item.ID">@item.Baslik</a></h4>
+                                <p class="date">
+                                    <time datetime="@item.YayinTarih ">@item.YayinTarih </time>
+                                    <span class="comments_count"><a href="#">@item.Yorum.Count</a></span>
+                                </p>
+                                <p>@item.Baslik</p>
+
+                            </div>
+                        </article>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</section>

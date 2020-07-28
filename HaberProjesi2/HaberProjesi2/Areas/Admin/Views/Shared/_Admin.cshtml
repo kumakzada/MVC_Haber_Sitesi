@@ -1,0 +1,332 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag-Haber</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="~/Areas/Admin/Content/Admin/css/bootstrap.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/Admin/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/Admin/css/style.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="js/ie/respond.min.js"></script>
+      <script src="js/flot/excanvas.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="~/Areas/Admin/Content/Admin/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/Areas/Admin/Content/Admin/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Areas/Admin/Content/Admin/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Areas/Admin/Content/Admin/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/Areas/Admin/Content/Admin/ico/apple-touch-icon-57-precomposed.png">
+    @RenderSection("head", false);
+</head>
+
+<body>
+
+    <div id="maincontainer" class="clearfix">
+
+
+        <!-- ======= Header start ======= -->
+        <div class="screen"></div>
+
+        <header>
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <div class="row-fluid">
+
+                            @*<div class="span6">
+                                    <a href="#" class="logo"></a>
+                                </div>*@
+
+                            <div class="span6">
+                                <div class="header-actions">
+                                    <div class="messages dropdown">
+                                        <a href="#" class="dropdown-toggle mess" data-toggle="dropdown"></a>
+
+                                        <ul class="messages-box dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+                                            <li>
+                                                <a href="#">
+                                                    <div class="image">
+                                                        <img src="~/Areas/Admin/Content/Admin/img/chat-avatar.png" alt="">
+                                                    </div>
+
+                                                    <div class="message">
+                                                        <span class="from"><strong>John Smith</strong> <span>40m ago</span><div class="clear"></div></span>
+                                                        <p>Hi, Eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <div class="image">
+                                                        <img src="~/Areas/Admin/Content/Admin/img/chat-avatar.png" alt="">
+                                                    </div>
+
+                                                    <div class="message">
+                                                        <span class="from"><strong>John Smith</strong> <span>40m ago</span><div class="clear"></div></span>
+                                                        <p>Hi, Eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <div class="image">
+                                                        <img src="~/Areas/Admin/Content/Admin/img/chat-avatar.png" alt="">
+                                                    </div>
+
+                                                    <div class="message">
+                                                        <span class="from"><strong>John Smith</strong> <span>40m ago</span><div class="clear"></div></span>
+                                                        <p>Hi, Eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <div class="image">
+                                                        <img src="~/Areas/Admin/Content/Admin/img/chat-avatar.png" alt="">
+                                                    </div>
+
+                                                    <div class="message">
+                                                        <span class="from"><strong>John Smith</strong> <span>40m ago</span><div class="clear"></div></span>
+                                                        <p>Hi, Eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </a>
+                                            </li>
+                                            <li><a href="#" class="all">View all messages</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="logged-info">
+                                        <a href="#" class="login">
+                                            <img src="~/Areas/Admin/Content/Admin/img/login-photo.png" alt="">
+                                            <a href="#">
+                                                @*@if (Session["ID"] == null)
+                                                {
+                                                    @Session["kullaniciadi"].ToString()
+                                                }*@
+                                            </a>
+                                            <span>
+                                            <i class="icon-chevron-down icon-white"></i>
+                                            </span>
+                                            <div class="clear"></div>
+                                        </a>
+
+                                        <div class="profile-options">
+                                            <img src="~/Areas/Admin/Content/Admin/img/login-photo.png" alt="">
+
+                                            <div class="info">
+                                                <h4>Bernad Delic <br> <span>example@yourdomain.com</span></h4>
+                                                <ul class="options">
+                                                    <li><a href="#">Edit profile</a></li>
+                                                    <li><a href="#">Account settings</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="logoff">
+                                        <a href="#" class="off lock"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ======= Header end ======= -->
+        <!-- ======= Content wrap ======= -->
+        <div id="contentwrap">
+
+            <div class="main-content">
+                <div class="container-fluid">
+                    @RenderBody()
+
+                </div>
+
+            </div>
+        </div>
+        <!-- ======= Content wrap end ======= -->
+
+
+
+        <a href="javascript:void(0);" class="sidebar_switch switch_on"></a>
+        <!-- ======= Main navigation ======= -->
+        <div class="main-navigation">
+            <!-- Main navigation start -->
+            <div class="antiscroll">
+                <div class="antiscroll-inner">
+                    <div class="antiscroll-content">
+                        <form>
+                            <div class="inner">
+                                <input type="text" name="search" placeholder="search for something...">
+                            </div>
+                        </form>
+
+                        <ul class="main-menu">
+                            <li><a href="/Admin/Admin"><i class="icon-home"></i> AnaSayfa</a></li>
+                            <li><a href="/Admin/Admin/HaberEkle"><i class="icon-edit"></i> Haber Ekle</a></li>
+                            <li><a href="/Home/cikis"><i class="icon-home"></i> Cikis</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- ======= Main navigation end ======= -->
+    </div>
+    <!-- ======= Main container end ======= -->
+    <!-- ======= Javascript ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/jquery-1.7.2.min.js"></script>
+
+    <!-- ======= Bootstrap plugins ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-transition.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-alert.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-modal.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-dropdown.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-scrollspy.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-tab.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-tooltip.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-popover.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-button.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-collapse.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-carousel.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/bootstrapPlugins/bootstrap-typeahead.js"></script>
+
+    <!-- ======= Chosen ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/chosen/chosen.jquery.js"></script>
+
+    <!-- ======= Antiscroll ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/antiscroll/antiscroll.js"></script>
+
+    <!-- ======= Cleditor ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/cleditor/jquery.cleditor.min.js"></script>
+
+    <!-- ======= Colorpicker ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/colorPicker/colorpicker.js"></script>
+
+    <!-- ======= Cookie ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/cookie/jquery.cookie.min.js"></script>
+
+    <!-- ======= Datatable ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/dataTable/jquery.dataTables.min.js"></script>
+
+    <!-- ======= Debounced resize ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/debonucedResize/jquery.debouncedresize.min.js"></script>
+
+    <!-- ======= Easy tabs ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/easyTabs/jquery.easytabs.min.js"></script>
+
+    <!-- ======= Fancybox ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/fancybox/jquery.easing-1.3.pack.html"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/fancybox/jquery.fancybox-1.3.4.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/fancybox/jquery.fancybox-1.3.4.pack.html"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+
+    <!-- ======= Jquery flot ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/flot/jquery.flot.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/flot/jquery.flot.pie.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/flot/jquery.flot.resize.js"></script>
+
+    <!-- ======= Full calendar ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/fullcalendar/fullcalendar.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/fullcalendar/excanvas.min.js"></script>
+
+    <!-- ======= File tree ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/jqueryFileTree/jqueryFileTree.js"></script>
+
+    <!-- ======= Jquery tagsinput ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/jqueryTags/jquery.tagsinput.min.js"></script>
+
+    <!-- ======= Jquery UI ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/jqueryui/jquery.spinners.min.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/jqueryui/jquery-ui-1.8.21.custom.min.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/jqueryui/ui.selectmenu.js"></script>
+
+    <!-- ======= Form wizards ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/form-wizard/jquery.form.wizard.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/form-wizard/jquery.form.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/form-wizard/bbq.js"></script>
+
+    <!-- ======= Masked inputs ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/maskedInputs/jquery.maskedinput-1.3.js"></script>
+
+    <!-- ======= Qtip ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/qtip/jquery.qtip.min.js"></script>
+
+    <!-- ======= Sparklines ======= -->
+    <script src="/Content/Admin/js/sparklines/jquery.sparkline.js"></script>
+
+    <!-- ======= Super textarea ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/superTextarea/jquery.supertextarea.min.js"></script>
+
+    <!-- ======= Jquery tipsy ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/tipsy/jquery.tipsy.js"></script>
+
+    <!-- ======= Jquery tipsy ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/lockscreen/lockscreen.js"></script>
+
+    <!-- ======= Jquery tipsy ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/prettyPhoto/jquery.prettyPhoto.js"></script>
+
+    <!-- ======= Jquery iButton ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/iButton/jquery.ibutton.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/iButton/jquery.metadata.js"></script>
+
+    <!-- ======= Jquery uniform ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/uniform/jquery.uniform.min.js"></script>
+
+    <!-- ======= Jquery validate ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/validate/jquery.validate.min.js"></script>
+
+    <!-- ======= Jquery validation engine ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/validationEngine/jquery.validationEngine.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/validationEngine/jquery.validationEngine-en.js"></script>
+
+    <!-- ======= xBreadcrumbs ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/xBreadcrumbs/xbreadcrumbs.js"></script>
+
+    <!-- ======= Custom ======= -->
+    <script src="~/Areas/Admin/Content/Admin/js/common.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/forms.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/tables.js"></script>
+    <script src="~/Areas/Admin/Content/Admin/js/dashboard.js"></script>
+    @RenderSection("script", false);
+    <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/ie8.css" />
+    <![endif]-->
+    <!--[if IE]>
+            <link rel="stylesheet" href="css/ie.css" />
+    <![endif]-->
+
+
+
+</body>
+</html>

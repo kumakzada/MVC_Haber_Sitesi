@@ -1,0 +1,33 @@
+﻿@model IEnumerable<HaberProjesi2.Models.Haber>
+@{
+    Layout = null;
+}
+<aside id="block_latest_headlines" class="block">
+    <h3 class="block_title">En Son Cikan Haberler</h3>
+    <div class="content">
+        <ul>
+            @{
+                int Sayac = 0;
+            }
+            @foreach (var item in Model)
+            {
+                if (Sayac == 0)
+                {
+                    <li class="first"><a href="/Haber/Goster/@item.Baslik/@item.ID">@item.Baslik</a></li>
+                }
+                else if (Sayac == 6)
+                {
+                    <li class="last"><a href="/Haber/Goster/@item.Baslik/@item.ID">@item.Baslik</a></li>
+                }
+                else
+                {
+                    <li><a href="/Haber/Goster/@item.Baslik/@item.ID">@item.Baslik</a></li>
+                }
+              
+            }
+
+        </ul>
+        <p><a href="/Tum/SonHaberler" class="view_all"><span><span>Tumu</span></span></a></p>
+    </div>
+</aside>
+
